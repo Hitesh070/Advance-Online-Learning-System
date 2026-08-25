@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f5f5f5"/>
+  <g transform="translate(100,70)">
+    <circle cx="0" cy="0" r="40" fill="#6c5ce7"/>
+    <rect x="-30" y="-30" width="20" height="60" fill="#a29bfe" rx="5" ry="5"/>
+    <rect x="0" y="-30" width="20" height="60" fill="#a29bfe" rx="5" ry="5"/>
+    <path d="M-40,40 L40,40 L30,60 L-30,60 Z" fill="#a29bfe"/>
+  </g>
+  <text x="150" y="150" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">Digital Drawing</text>
+</svg>

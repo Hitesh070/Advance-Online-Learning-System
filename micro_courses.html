@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPTEL Micro-Courses & Certifications - UpliftEd</title>
+    <link rel="stylesheet" href="home_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cleaned Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>UpliftEd Portal</h3>
+            <div class="sidebar-close" id="sidebar-close"><i class="fa-solid fa-xmark"></i></div>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="home.html"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="student_class.html"><i class="fa-solid fa-chalkboard-user"></i> Live Class Demo</a></li>
+            <li><a href="community.html"><i class="fa-solid fa-users"></i> Community Forum</a></li>
+            <li class="active"><a href="micro_courses.html"><i class="fa-solid fa-book-open"></i> Micro Courses (NPTEL)</a></li>
+            <li><a href="progress_report.html"><i class="fa-solid fa-chart-line"></i> Progress Analytics</a></li>
+            <li><a href="scholarship.html"><i class="fa-solid fa-graduation-cap"></i> Scholarship Aid</a></li>
+        </ul>
+    </div>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container">
+            <div style="display: flex; align-items: center;">
+                <div class="sidebar-toggle" id="sidebar-toggle"><i class="fa-solid fa-bars"></i></div>
+                <div class="logo"><h1>UpliftEd</h1></div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="home.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="student_class.html"><i class="fa-solid fa-chalkboard-user"></i> Live Class Demo</a></li>
+                    <li><a href="micro_courses.html"><i class="fa-solid fa-book-open"></i> Courses</a></li>
+                    <li><a href="community.html"><i class="fa-solid fa-comments"></i> Forum</a></li>
+                    <li><a href="progress_report.html"><i class="fa-solid fa-chart-pie"></i> Analytics</a></li>
+                    <li><a href="scholarship.html"><i class="fa-solid fa-award"></i> Aid</a></li>
+                    <li><a href="login.html" class="btn btn-secondary"><i class="fa-solid fa-right-to-bracket"></i> Sign In</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section style="padding-top: 140px; padding-bottom: 60px;">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px; margin-bottom: 30px;">
+                <div>
+                    <h2 style="font-size: 2.2rem; color: #0f172a; margin-bottom: 4px;">NPTEL Micro-Courses & Certifications</h2>
+                    <p style="margin: 0; color: #64748b;">Structured modules with video lectures, official notes, and automated quizzes.</p>
+                </div>
+            </div>
+
+            <!-- Earned Badges Header Card -->
+            <div class="glass-card" style="padding: 20px 24px; margin-bottom: 35px; background: white;">
+                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px;">
+                    <div>
+                        <h4 style="margin: 0; font-size: 1rem; color: #0f172a;"><i class="fa-solid fa-award" style="color: #f59e0b;"></i> Unlocked Micro-Badges</h4>
+                        <span style="font-size: 0.825rem; color: #64748b;">Earned by passing NPTEL module assessments</span>
+                    </div>
+                    <div id="user-badges" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <!-- Rendered by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search & Filters -->
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 30px;">
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <button class="lang-chip category-filter active" data-category="all">All Courses</button>
+                    <button class="lang-chip category-filter" data-category="cs">Computer Science</button>
+                    <button class="lang-chip category-filter" data-category="ai">AI & Machine Learning</button>
+                    <button class="lang-chip category-filter" data-category="stem">AgriTech & STEM</button>
+                </div>
+                <div style="position: relative; min-width: 260px;">
+                    <input type="text" id="course-search" placeholder="Search NPTEL courses..." style="width: 100%; padding: 10px 16px 10px 38px; border-radius: 99px; border: 1px solid #cbd5e1; outline: none; font-size: 0.9rem;">
+                    <i class="fa-solid fa-magnifying-glass" style="position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: #94a3b8;"></i>
+                </div>
+            </div>
+
+            <!-- Courses Grid -->
+            <div id="courses-grid" class="features-grid">
+                <!-- Rendered dynamically by micro_courses_script.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 UpliftEd - Advance Online Learning System.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="home_script.js"></script>
+    <script src="micro_courses_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+[09-Sep-2025 05:30:00] PHP Notice: Test log entry
+[09-Sep-2025 05:30:01] Database: Attempting to connect to host localhost to create database
+[09-Sep-2025 05:30:02] Database: Executing SQL: CREATE DATABASE IF NOT EXISTS `student_login_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
+[09-Sep-2025 05:30:03] Database: Successfully created or confirmed database student_login_db
+[09-Sep-2025 05:30:04] Database: Attempting to connect to mysql:host=localhost;dbname=student_login_db;charset=utf8mb4 with user root
+[09-Sep-2025 05:30:05] Database: Connection successful

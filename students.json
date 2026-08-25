@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Alice Smith",
+        "roll_no": "101",
+        "grade": 92.5,
+        "course": "Data Science"
+    },
+    {
+        "name": "Bob Johnson",
+        "roll_no": "102",
+        "grade": 78.0,
+        "course": "Computer Science"
+    },
+    {
+        "name": "Charlie Brown",
+        "roll_no": "103",
+        "grade": 85.5,
+        "course": "AI & Machine Learning"
+    },
+    {
+        "name": "Diana Prince",
+        "roll_no": "104",
+        "grade": 95.0,
+        "course": "Software Engineering"
+    },
+    {
+        "name": "Ethan Hunt",
+        "roll_no": "105",
+        "grade": 64.0,
+        "course": "Cybersecurity"
+    }
+]

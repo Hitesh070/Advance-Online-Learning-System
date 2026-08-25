@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarships & Financial Aid - UpliftEd</title>
+    <link rel="stylesheet" href="home_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cleaned Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>UpliftEd Portal</h3>
+            <div class="sidebar-close" id="sidebar-close"><i class="fa-solid fa-xmark"></i></div>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="home.html"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="student_class.html"><i class="fa-solid fa-chalkboard-user"></i> Live Class Demo</a></li>
+            <li><a href="community.html"><i class="fa-solid fa-users"></i> Community Forum</a></li>
+            <li><a href="micro_courses.html"><i class="fa-solid fa-book-open"></i> Micro Courses (NPTEL)</a></li>
+            <li><a href="progress_report.html"><i class="fa-solid fa-chart-line"></i> Progress Analytics</a></li>
+            <li class="active"><a href="scholarship.html"><i class="fa-solid fa-graduation-cap"></i> Scholarship Aid</a></li>
+        </ul>
+    </div>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div style="display: flex; align-items: center;">
+                <div class="sidebar-toggle" id="sidebar-toggle"><i class="fa-solid fa-bars"></i></div>
+                <div class="logo"><h1>UpliftEd</h1></div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="home.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="student_class.html"><i class="fa-solid fa-chalkboard-user"></i> Live Class Demo</a></li>
+                    <li><a href="micro_courses.html"><i class="fa-solid fa-book-open"></i> Courses</a></li>
+                    <li><a href="community.html"><i class="fa-solid fa-comments"></i> Forum</a></li>
+                    <li><a href="progress_report.html"><i class="fa-solid fa-chart-pie"></i> Analytics</a></li>
+                    <li><a href="scholarship.html"><i class="fa-solid fa-award"></i> Aid</a></li>
+                    <li><a href="login.html" class="btn btn-secondary"><i class="fa-solid fa-right-to-bracket"></i> Sign In</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section style="padding-top: 140px; padding-bottom: 60px;">
+        <div class="container">
+            <div class="section-header" style="text-align: left; margin-bottom: 30px;">
+                <h2>Educational Scholarships & Financial Aid Grants</h2>
+                <p>Apply for verified academic grants, STEM fellowships, and rural student assistance.</p>
+            </div>
+
+            <!-- Active Applications Drawer Card -->
+            <div class="glass-card" style="padding: 24px; background: white; margin-bottom: 35px;">
+                <h3 style="font-size: 1.1rem; color: #0f172a; margin-bottom: 14px;"><i class="fa-solid fa-file-signature" style="color: #0284c7;"></i> My Submitted Applications</h3>
+                <div id="my-applications">
+                    <!-- Rendered by scholarship_script.js -->
+                </div>
+            </div>
+
+            <!-- Category Filters -->
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 30px;">
+                <button class="lang-chip grant-filter active" data-category="all">All Grants</button>
+                <button class="lang-chip grant-filter" data-category="stem">STEM Grants</button>
+                <button class="lang-chip grant-filter" data-category="need">Need-Based Aid</button>
+                <button class="lang-chip grant-filter" data-category="merit">Merit Fellowships</button>
+            </div>
+
+            <!-- Available Grants List -->
+            <div id="grants-list">
+                <!-- Rendered dynamically by scholarship_script.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 UpliftEd - Advance Online Learning System.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="home_script.js"></script>
+    <script src="scholarship_script.js"></script>
+</body>
+</html>

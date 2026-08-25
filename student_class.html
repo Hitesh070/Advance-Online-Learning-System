@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Virtual Classroom Demo - UpliftEd</title>
+    <link rel="stylesheet" href="home_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cleaned Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>UpliftEd Portal</h3>
+            <div class="sidebar-close" id="sidebar-close"><i class="fa-solid fa-xmark"></i></div>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="home.html"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li class="active"><a href="student_class.html"><i class="fa-solid fa-chalkboard-user"></i> Live Class Demo</a></li>
+            <li><a href="community.html"><i class="fa-solid fa-users"></i> Community Forum</a></li>
+            <li><a href="micro_courses.html"><i class="fa-solid fa-book-open"></i> Micro Courses (NPTEL)</a></li>
+            <li><a href="progress_report.html"><i class="fa-solid fa-chart-line"></i> Progress Analytics</a></li>
+            <li><a href="scholarship.html"><i class="fa-solid fa-graduation-cap"></i> Scholarship Aid</a></li>
+        </ul>
+    </div>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container">
+            <div style="display: flex; align-items: center;">
+                <div class="sidebar-toggle" id="sidebar-toggle"><i class="fa-solid fa-bars"></i></div>
+                <div class="logo"><h1>UpliftEd</h1></div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="home.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="student_class.html"><i class="fa-solid fa-chalkboard-user"></i> Live Class Demo</a></li>
+                    <li><a href="micro_courses.html"><i class="fa-solid fa-book-open"></i> Courses</a></li>
+                    <li><a href="community.html"><i class="fa-solid fa-comments"></i> Forum</a></li>
+                    <li><a href="progress_report.html"><i class="fa-solid fa-chart-pie"></i> Analytics</a></li>
+                    <li><a href="scholarship.html"><i class="fa-solid fa-award"></i> Aid</a></li>
+                    <li><a href="login.html" class="btn btn-secondary"><i class="fa-solid fa-right-to-bracket"></i> Sign In</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section style="padding-top: 130px; padding-bottom: 60px;">
+        <div class="container">
+            
+            <!-- Classroom Header Control Bar -->
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 24px;">
+                <div>
+                    <span style="font-size: 0.8rem; font-weight: 700; color: #059669; background: #d1fae5; padding: 4px 12px; border-radius: 99px;">
+                        <i class="fa-solid fa-circle" style="font-size: 0.6rem; color: #10b981;"></i> Live Virtual Classroom Stage
+                    </span>
+                    <h2 style="font-size: 2rem; color: #0f172a; margin-top: 6px;">CS201: Artificial Neural Networks Lecture</h2>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <!-- YOLOv8 Safety Status Badge -->
+                    <div id="ai-safety-status" style="font-size: 0.825rem; font-weight: 700; background: #0f172a; color: #10b981; border: 1px solid #334155; padding: 6px 16px; border-radius: 99px;">
+                        <i class="fa-solid fa-shield-halved" style="color: #10b981;"></i> YOLOv8 Guard: Active (30 FPS)
+                    </div>
+                    <!-- Hazard Simulation Test Case Button -->
+                    <button id="btn-simulate-hazard" class="btn btn-danger" style="padding: 8px 18px; font-size: 0.85rem;">
+                        <i class="fa-solid fa-triangle-exclamation"></i> Simulate Safety Hazard (Test Case)
+                    </button>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 2.2fr 1fr; gap: 24px;">
+
+                <!-- Left Column: Video Stage & Subtitle Feed -->
+                <div>
+                    <!-- Stage Container -->
+                    <div style="background: #0f172a; border-radius: 24px; height: 440px; position: relative; overflow: hidden; border: 1px solid #334155; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.3);">
+                        <video id="local-video-feed" autoplay playsinline muted style="width: 100%; height: 100%; object-fit: cover; background: #0f172a;"></video>
+
+                        <!-- Classroom Overlay Info -->
+                        <div style="position: absolute; top: 16px; left: 16px; background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(10px); padding: 8px 16px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); color: white;">
+                            <h4 style="margin: 0; font-size: 0.95rem; color: white;">Prof. Alan Miller — Live Stream</h4>
+                            <span style="font-size: 0.8rem; color: #94a3b8;"><i class="fa-solid fa-users"></i> 42 Students Connected</span>
+                        </div>
+
+                        <!-- Video Toolbar -->
+                        <div style="position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(14px); padding: 8px 20px; border-radius: 99px; border: 1px solid #334155;">
+                            <button id="toggle-cam-btn" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.825rem;"><i class="fa-solid fa-video"></i> Camera On</button>
+                            <button id="toggle-mic-btn" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.825rem;"><i class="fa-solid fa-microphone"></i> Mic Unmuted</button>
+                            <button id="share-screen-btn" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.825rem; color: white; background: #1e293b; border-color: #475569;"><i class="fa-solid fa-desktop"></i> Share Screen</button>
+                            <button id="raise-hand-btn" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.825rem; color: white; background: #1e293b; border-color: #475569;"><i class="fa-solid fa-hand"></i> Raise Hand</button>
+                        </div>
+                    </div>
+
+                    <!-- Subtitles & Translation Bar -->
+                    <div class="glass-card" style="padding: 24px; margin-top: 20px; background: white;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 10px;">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <h4 style="color: #0f172a; font-size: 1rem; margin: 0;"><i class="fa-solid fa-closed-captioning" style="color: #0284c7;"></i> Multilingual Live Translation Feed</h4>
+                                <select id="class-lang-select" style="background: #f8fafc; color: #0f172a; border: 1px solid #cbd5e1; border-radius: 99px; padding: 6px 14px; font-size: 0.825rem; outline: none; cursor: pointer; font-weight: 600;">
+                                    <option value="es">Spanish (Español)</option>
+                                    <option value="hi">Hindi (हिन्दी)</option>
+                                    <option value="fr">French (Français)</option>
+                                    <option value="de">German (Deutsch)</option>
+                                    <option value="ta">Tamil (தமிழ்)</option>
+                                    <option value="te">Telugu (తెలుగు)</option>
+                                </select>
+                            </div>
+                            
+                            <label style="display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: #059669; font-weight: 700; cursor: pointer;">
+                                <input type="checkbox" id="toggle-auto-tts">
+                                <span><i class="fa-solid fa-volume-high"></i> Auto Read Audio (TTS)</span>
+                            </label>
+                        </div>
+
+                        <div id="transcript-feed" style="max-height: 140px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px;">
+                            <!-- Streamed in real-time by student_class.js -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Automatic AI Notes Pad & Classroom Chat -->
+                <div style="display: flex; flex-direction: column; gap: 20px;">
+                    <!-- Automatic AI Notes Pad -->
+                    <div class="glass-card" style="padding: 22px; background: white; flex: 1; display: flex; flex-direction: column;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <h4 style="color: #0f172a; font-size: 1rem; margin: 0;"><i class="fa-solid fa-wand-magic-sparkles" style="color: #059669;"></i> Automatic AI Notes</h4>
+                            <button id="btn-save-notes" class="btn btn-primary" style="padding: 6px 14px; font-size: 0.8rem;"><i class="fa-solid fa-download"></i> Save Notes</button>
+                        </div>
+                        <textarea id="class-notes" placeholder="Automatic AI notes will generate here live as the professor speaks..." style="flex: 1; width: 100%; background: #f8fafc; border: 1px solid #cbd5e1; color: #0f172a; border-radius: 12px; padding: 12px; font-family: monospace; font-size: 0.85rem; outline: none; resize: none; min-height: 180px;"></textarea>
+                    </div>
+
+                    <!-- Classroom Chat -->
+                    <div class="glass-card" style="padding: 22px; background: white; height: 260px; display: flex; flex-direction: column;">
+                        <h4 style="color: #0f172a; font-size: 1rem; margin-bottom: 12px;"><i class="fa-solid fa-comments" style="color: #0284c7;"></i> Classroom Chat</h4>
+                        <div id="chat-messages" style="flex: 1; overflow-y: auto; margin-bottom: 12px; padding-right: 4px;">
+                            <div style="font-size: 0.825rem; color: #64748b; margin-bottom: 6px;"><strong style="color: #059669;">YOLOv8 Safety Bot:</strong> Class active & monitored.</div>
+                        </div>
+                        <div style="display: flex; gap: 8px;">
+                            <input type="text" id="chat-input" placeholder="Ask a question..." style="flex: 1; background: #f8fafc; border: 1px solid #cbd5e1; color: #0f172a; padding: 8px 14px; border-radius: 99px; outline: none; font-size: 0.85rem;">
+                            <button id="chat-send-btn" class="btn btn-primary" style="padding: 6px 14px; font-size: 0.85rem;">Send</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 UpliftEd - Advance Online Learning System.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/yolo-detector.js"></script>
+    <script src="js/camera-recorder.js"></script>
+    <script src="home_script.js"></script>
+    <script src="student_class.js"></script>
+</body>
+</html>

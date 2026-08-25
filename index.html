@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <!-- Registration Form -->
+            <div class="login-form">
+                <h1>Student Registration</h1>
+                <div class="form-header">
+                    <p>Create a new account to access your student portal</p>
+                </div>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="reg-fullname">Full Name</label>
+                        <input type="text" id="reg-fullname" name="fullname" placeholder="Enter your full name" required>
+                        <span class="error" id="reg-fullname-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-email">Gmail ID</label>
+                        <input type="email" id="reg-email" name="email" placeholder="example@gmail.com" required>
+                        <span class="error" id="reg-email-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-password">Create Password</label>
+                        <input type="password" id="reg-password" name="password" placeholder="Create a strong password" required>
+                        <span class="error" id="reg-password-error"></span>
+                    </div>
+                    <div class="form-group remember-me">
+                        <input type="checkbox" id="reg-remember" name="remember">
+                        <label for="reg-remember">Remember me</label>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" id="register-btn">Create Account</button>
+                    </div>
+                    <div class="form-links">
+                        <a href="login.html">Already have an account? Login</a>
+                    </div>
+                </form>
+            </div>
+            
+
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="index_script.js"></script>
+</body>
+</html>

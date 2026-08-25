@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UpliftEd - Advance Online Learning System</title>
+    <link rel="stylesheet" href="home_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cleaned Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>UpliftEd Portal</h3>
+            <div class="sidebar-close" id="sidebar-close"><i class="fa-solid fa-xmark"></i></div>
+        </div>
+        <ul class="sidebar-menu">
+            <li class="active"><a href="home.html"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="student_class.html"><i class="fa-solid fa-chalkboard-user"></i> Live Class Demo</a></li>
+            <li><a href="community.html"><i class="fa-solid fa-users"></i> Community Forum</a></li>
+            <li><a href="micro_courses.html"><i class="fa-solid fa-book-open"></i> Micro Courses (NPTEL)</a></li>
+            <li><a href="progress_report.html"><i class="fa-solid fa-chart-line"></i> Progress Analytics</a></li>
+            <li><a href="scholarship.html"><i class="fa-solid fa-graduation-cap"></i> Scholarship Aid</a></li>
+        </ul>
+    </div>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container">
+            <div style="display: flex; align-items: center;">
+                <div class="sidebar-toggle" id="sidebar-toggle"><i class="fa-solid fa-bars"></i></div>
+                <div class="logo"><h1>UpliftEd</h1></div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="home.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="student_class.html"><i class="fa-solid fa-chalkboard-user"></i> Live Class Demo</a></li>
+                    <li><a href="micro_courses.html"><i class="fa-solid fa-book-open"></i> Courses</a></li>
+                    <li><a href="community.html"><i class="fa-solid fa-comments"></i> Forum</a></li>
+                    <li><a href="progress_report.html"><i class="fa-solid fa-chart-pie"></i> Analytics</a></li>
+                    <li><a href="scholarship.html"><i class="fa-solid fa-award"></i> Aid</a></li>
+                    <li><a href="login.html" class="btn btn-secondary"><i class="fa-solid fa-right-to-bracket"></i> Sign In</a></li>
+                    <li><a href="index.html" class="btn btn-primary"><i class="fa-solid fa-user-plus"></i> Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Live Speech Translator -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: 99px; background: rgba(5, 150, 105, 0.1); color: #059669; font-weight: 700; font-size: 0.875rem; margin-bottom: 20px;">
+                    <i class="fa-solid fa-bolt" style="color: #059669;"></i> AI Multilingual Lecture Engine
+                </div>
+                <h1>Break Education Barriers <span>In Real-Time</span></h1>
+                <p>Live classroom speech translation, automated note taking, YOLOv8 safety moderation, and NPTEL-style micro-courses.</p>
+                <div class="hero-buttons">
+                    <a href="student_class.html" class="btn btn-primary"><i class="fa-solid fa-play-circle"></i> Enter Live Class Demo</a>
+                    <a href="micro_courses.html" class="btn btn-secondary"><i class="fa-solid fa-graduation-cap"></i> NPTEL Courses</a>
+                </div>
+            </div>
+            
+            <!-- Upgraded Translator Section -->
+            <div class="translator-box">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #334155; padding-bottom: 14px;">
+                    <div>
+                        <h3 style="color: white; font-size: 1.15rem; margin: 0;"><i class="fa-solid fa-language" style="color: #10b981;"></i> Live Speech & Text Translator</h3>
+                        <span style="font-size: 0.8rem; color: #94a3b8;">Real-time Microphone Audio Translation</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <div id="translator-wave" class="sound-wave" style="display: none;">
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                        <button id="btn-mic-listen" class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.8rem; background: #1e293b; color: white; border-color: #334155;"><i class="fa-solid fa-microphone" style="color: #10b981;"></i> Voice Input</button>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px;">
+                    <button class="lang-chip active" data-lang="es">Spanish</button>
+                    <button class="lang-chip" data-lang="hi">Hindi</button>
+                    <button class="lang-chip" data-lang="fr">French</button>
+                    <button class="lang-chip" data-lang="de">German</button>
+                    <button class="lang-chip" data-lang="ta">Tamil</button>
+                    <button class="lang-chip" data-lang="te">Telugu</button>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                    <div style="background: #1e293b; border-radius: 14px; padding: 18px; border: 1px solid #334155;">
+                        <div style="font-size: 0.8rem; text-transform: uppercase; color: #94a3b8; margin-bottom: 8px; font-weight: 700;">Source Lecture Speech / Text</div>
+                        <textarea id="demo-input" style="width: 100%; background: transparent; border: none; color: white; font-size: 0.95rem; outline: none; resize: none; font-family: inherit;" rows="3">Welcome to UpliftEd online learning portal</textarea>
+                        <div style="margin-top: 8px; display: flex; gap: 6px; flex-wrap: wrap;">
+                            <span class="sample-btn" style="font-size: 0.725rem; background: #334155; color: #cbd5e1; padding: 4px 8px; border-radius: 6px; cursor: pointer;">Welcome to UpliftEd online learning portal</span>
+                            <span class="sample-btn" style="font-size: 0.725rem; background: #334155; color: #cbd5e1; padding: 4px 8px; border-radius: 6px; cursor: pointer;">Education is the most powerful weapon to change the world</span>
+                        </div>
+                    </div>
+                    
+                    <div style="background: #1e293b; border-radius: 14px; padding: 18px; border: 1px solid #334155; display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                <span style="font-size: 0.8rem; text-transform: uppercase; color: #38bdf8; font-weight: 700;">Live Translated Output</span>
+                                <button id="btn-copy-translation" style="background: none; border: none; color: #94a3b8; cursor: pointer; font-size: 0.8rem;"><i class="fa-regular fa-copy"></i> Copy</button>
+                            </div>
+                            <div id="demo-output" style="font-size: 1rem; color: #38bdf8; font-weight: 600;">Bienvenido al portal de aprendizaje en línea UpliftEd</div>
+                        </div>
+                        <div style="text-align: right; margin-top: 12px;">
+                            <button id="btn-speak-translation" class="btn btn-primary" style="padding: 6px 16px; font-size: 0.8rem;"><i class="fa-solid fa-volume-high"></i> Play Spoken Audio</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Designed For Safe, High-Impact Learning</h2>
+                <p>Everything you need for safe online classrooms, accredited micro-courses, and financial support.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-shield-halved" style="color: #059669;"></i></div>
+                    <h3>YOLOv8 AI Safety & Behavior Guard</h3>
+                    <p>Monitors video feeds for hostile expression, harassment, and prohibited content with automated emergency call termination.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-pen-fancy" style="color: #0284c7;"></i></div>
+                    <h3>Automated AI Note Taking</h3>
+                    <p>Live lecture transcripts are automatically parsed into structured, timestamped chapter notes available for immediate download.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-book-bookmark" style="color: #f59e0b;"></i></div>
+                    <h3>NPTEL-Style Micro Credentials</h3>
+                    <p>Structured video lectures, downloadable notes, interactive assignments, and verifiable digital certificates.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-hand-holding-dollar" style="color: #8b5cf6;"></i></div>
+                    <h3>Scholarship Assistance</h3>
+                    <p>Direct application access to verified educational financial aid, merit grants, and STEM fellowships.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 UpliftEd - Advance Online Learning System.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="home_script.js"></script>
+</body>
+</html>
