@@ -71,27 +71,55 @@ Online educational platforms frequently encounter three core operational challen
 ├── community.html              # Peer Discussion and Q&A Forum
 ├── progress_report.html        # Student Performance Analytics Dashboard
 ├── scholarship.html            # Financial Aid Application Portal
-├── home_styles.css             # Unified CSS Design System and Component Styling
-├── styles.css                  # Authentication Forms Styling
-├── home_script.js              # Microphone Speech Translation Engine
-├── student_class.js            # Live Classroom Automation and YOLOv8 Safety Logic
-├── teacher_class.js            # Instructor Studio Controls
-├── micro_courses_script.js     # Micro-Courses Video, Notes, and Assessment Engine
-├── community_script.js         # Forum Management Engine
-├── progress_script.js          # Analytics and Grade Reporting Engine
-├── scholarship_script.js       # Financial Aid Processing Engine
-├── index_script.js             # Client Registration Validation
-├── login_script.js             # Client Authentication Session Store
-├── js/
-│   ├── yolo-detector.js        # YOLOv8 Computer Vision Content Moderation Module
+├── login.php                   # Authentication Endpoint
+├── register.php                # User Registration Endpoint
+├── logout.php                  # Session Termination Endpoint
+├── dashboard.php               # User Dashboard Gateway
+├── db_connect.php              # Database Connector
+├── run_migration.bat           # Database Migration Utility
+├── main.py                     # Python Desktop Application Launcher
+├── front_end.py                # Python Desktop CustomTkinter User Interface
+├── back_end.py                 # Python Backend Operations Engine
+├── practice.py                 # Python Command-Line Interface (CLI Mode)
+├── students.json               # Student Records Local Store
+├── users.json                  # User Credentials Local Store
+├── css/                        # Stylesheets Directory
+│   ├── home_styles.css         # Unified Design System, Layout, and Component Styling
+│   └── styles.css              # Authentication Forms Styling
+├── js/                         # JavaScript Client Scripts and Modules
+│   ├── home_script.js          # Speech Translation and Voice Synthesizer Engine
+│   ├── student_class.js        # Classroom Video Calling, Notes, and Safety Controller
+│   ├── teacher_class.js        # Instructor Broadcast and Moderation Controller
+│   ├── micro_courses_script.js # NPTEL Courses, Video, Notes, and Quiz Engine
+│   ├── community_script.js     # Community Discussion and Forum Manager
+│   ├── progress_script.js      # Analytics, Performance, and Grade Exporter
+│   ├── scholarship_script.js   # Financial Aid and Scholarship Manager
+│   ├── index_script.js         # Client-Side Registration Validator
+│   ├── login_script.js         # Client-Side Authentication Session Handler
+│   ├── yolo-detector.js        # YOLOv8 Computer Vision Content Moderator
 │   └── camera-recorder.js      # Media Stream Handler and Local Recording Manager
-├── backend/
+├── images/                     # Media and Icon Assets
+├── backend/                    # PHP Backend MVC Architecture
 │   ├── config/database.php     # MySQL PDO Database Connection (Singleton Pattern)
 │   ├── controllers/            # Authentication and Student Controllers
-│   └── models/                 # Database Schemas and User Models
-├── main.py                     # Python Desktop Application Launcher
-├── back_end.py                 # Python Backend Operations Engine
-└── front_end.py                # Python Desktop CustomTkinter User Interface
+│   ├── models/                 # User and Student Data Models
+│   ├── middleware/             # Route and Token Authentication Middleware
+│   ├── database/               # Database Initialization and SQL Schemas
+│   └── utils/                  # JSON Web Token (JWT) Utilities
+└── Documentation/              # Comprehensive Project Documentation
+    ├── README.md               # Documentation Index and Guide
+    ├── DATABASE_SETUP.md       # Database Configuration and Migration Guide
+    ├── HACKATHON_PROJECT_SUMMARY.md # Executive Hackathon Project Summary
+    ├── BACKEND_IMPLEMENTATION.md    # PHP Backend Implementation Details
+    ├── BACKEND_README.md            # Backend Architecture Guide
+    └── Screenshots/            # System Interface Demo Screenshots
+        ├── Home.png
+        ├── Live Class Demo.png
+        ├── Micro Courses.png
+        ├── Forum.png
+        ├── Analysis.png
+        ├── Aid.png
+        └── Student Login.png
 ```
 
 ---
@@ -100,13 +128,17 @@ Online educational platforms frequently encounter three core operational challen
 
 ### Web Application Environment
 1. Deploy the workspace directory to an Apache/Nginx web server with PHP 8.x and MySQL enabled.
-2. Import the database schema from `backend/config/` into MySQL.
+2. Import the database schema from `backend/database/schema.sql` into MySQL, or execute `run_migration.bat`.
 3. Access `index.html` or `home.html` through a modern web browser (Google Chrome or Microsoft Edge recommended for full Web Speech API compatibility).
 
 ### Python Desktop GUI Environment
 To launch the desktop interface, execute:
 ```bash
 python main.py
+```
+For command-line interface (CLI) mode:
+```bash
+python main.py --cli
 ```
 
 ---
@@ -115,3 +147,4 @@ python main.py
 * **Python Compilation**: All core Python modules compile without syntax errors.
 * **Unit Testing**: Automated test suites report clean execution (`3/3 tests passed`).
 * **Code Integrity**: All legacy, unreferenced, and stray files have been purged from the repository.
+* **Documentation**: Detailed setup and architectural specifications are organized inside the `Documentation/` directory.

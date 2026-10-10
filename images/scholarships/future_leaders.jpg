@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
-  <rect width="80" height="80" fill="#a777e3"/>
-  <text x="40" y="45" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Future</text>
-  <text x="40" y="60" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Leaders</text>
-  <path d="M40,15 L45,25 L55,25 L47,32 L50,42 L40,36 L30,42 L33,32 L25,25 L35,25 Z" fill="white"/>
-</svg>
