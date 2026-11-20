@@ -105,27 +105,27 @@ UpliftEd delivers a cohesive, hybrid learning platform:
 ```mermaid
 flowchart TD
     subgraph ClientLayer ["Client Layer"]
-        WebClient["Web Browser Client\n(HTML5 / CSS3 / ES6+)"]
-        PyDesktop["Python Desktop GUI\n(CustomTkinter / front_end.py)"]
-        PyCLI["CLI Administrative Shell\n(practice.py)"]
+        WebClient["Web Browser Client<br/>(HTML5 / CSS3 / ES6+)"]
+        PyDesktop["Python Desktop GUI<br/>(CustomTkinter / front_end.py)"]
+        PyCLI["CLI Administrative Shell<br/>(practice.py)"]
     end
 
     subgraph PerceptionLayer ["Edge Perception & Speech Engine"]
-        SpeechRec["Web Speech API\n(SpeechRecognition 16kHz)"]
-        TransEngine["Translation Pipeline\n(REST Language Endpoints)"]
-        SpeechSynth["Web Speech Synthesis\n(window.speechSynthesis)"]
-        YOLO["YOLOv8 Computer Vision Guard\n(Client-Side Video Stream Inference)"]
+        SpeechRec["Web Speech API<br/>(SpeechRecognition 16kHz)"]
+        TransEngine["Translation Pipeline<br/>(REST Language Endpoints)"]
+        SpeechSynth["Web Speech Synthesis<br/>(window.speechSynthesis)"]
+        YOLO["YOLOv8 Computer Vision Guard<br/>(Client-Side Video Stream Inference)"]
     end
 
     subgraph ServiceLayer ["Backend REST Services (PHP 8.1+)"]
-        AuthAPI["backend/api/auth.php\n(Register, Login, Token Verify)"]
-        UserAPI["backend/api/users.php\n(Profile, Grade Analytics)"]
-        JWTMiddleware["AuthMiddleware\n(Bearer Token JWT Verification)"]
+        AuthAPI["backend/api/auth.php<br/>(Register, Login, Token Verify)"]
+        UserAPI["backend/api/users.php<br/>(Profile, Grade Analytics)"]
+        JWTMiddleware["AuthMiddleware<br/>(Bearer Token JWT Verification)"]
     end
 
     subgraph PersistenceLayer ["Data Persistence"]
-        MySQL[(MySQL 8.0 Database\nbackend/database/schema.sql)]
-        LocalStore[(Offline JSON Stores\nstudents.json / users.json)]
+        MySQL[("MySQL 8.0 Database<br/>backend/database/schema.sql")]
+        LocalStore[("Offline JSON Stores<br/>students.json / users.json")]
     end
 
     WebClient --> SpeechRec
