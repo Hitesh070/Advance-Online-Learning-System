@@ -382,7 +382,7 @@ sequenceDiagram
     participant WebUI as UpliftEd Browser UI
     participant Speech as Web Speech API
     participant Vision as YOLOv8 Safety Guard
-    participant Server as PHP Backend & DB
+    participant Server as PHP Backend and DB
 
     Teacher->>WebUI: Speak lecture content (Microphone)
     WebUI->>Speech: Ingest audio stream (16 kHz PCM)
@@ -393,7 +393,7 @@ sequenceDiagram
 
     loop Real-Time Video Monitoring
         WebUI->>Vision: Canvas frame buffer (30 FPS)
-        Vision-->>WebUI: Bounding boxes & confidence scores
+        Vision-->>WebUI: Bounding boxes and confidence scores
         alt Prohibited Conduct / Hazard Detected
             Vision->>WebUI: Trigger Safety Alarm
             WebUI->>Server: Log Incident Ticket (INC-XXXXXX)
